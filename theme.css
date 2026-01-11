@@ -1,0 +1,470 @@
+:root {
+  /* Material Theme Darker High Contrast */
+  --mt-bg-darkest: #0a0a0a; /* background utama - lebih gelap */
+  --mt-bg-dark: #121212; /* sidebar, panel */
+  --mt-bg-elevated: #1a1a1a; /* menu, popup */
+  --mt-border: #2a2a2a; /* border */
+
+  /* Text colors */
+  --mt-text: #ffffff; /* text utama - high contrast */
+  --mt-text-muted: #b0bec5; /* text secondary */
+  --mt-text-faint: #546e7a; /* text faint */
+
+  /* Accent colors dari README.md */
+  --mt-yellow: #ffcb6b; /* function, accent utama */
+  --mt-green: #86efac; /* parameter */
+  --mt-red: #f07178; /* property, error */
+  --mt-orange: #f08a5d; /* this, special */
+  --mt-coral: #e95c63; /* object keys, template expr */
+  --mt-purple: #c792ea; /* keywords, boolean */
+  --mt-cyan: #89ddff; /* operators, punctuation */
+  --mt-blue: #82aaff; /* links */
+
+  /* Opacity variants */
+  --mt-yellow_30: #ffcb6b4d;
+  --mt-yellow_10: #ffcb6b1a;
+  --mt-purple_30: #c792ea4d;
+}
+
+body {
+  /* Yellow accent */
+  --accent-h: 43;
+  --accent-s: 100%;
+  --accent-l: 70%;
+
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: underline;
+
+  --tag-decoration: none;
+  --tag-decoration-hover: underline;
+  --tag-padding-x: 0.5em;
+  --tag-padding-y: 0.2em;
+  --tag-radius: 0.5em;
+}
+
+.theme-dark {
+  /* Background - High Contrast (lebih gelap) */
+  --background-primary: var(--mt-bg-dark);
+  /* --background-primary: var(--mt-bg-darkest); */
+  --background-primary-alt: var(--mt-bg-dark);
+  --background-secondary: var(--mt-bg-dark);
+  --background-secondary-alt: var(--mt-bg-elevated);
+  --background-modifier-border: var(--mt-border);
+
+  --cursor-line-background: var(--mt-bg-elevated);
+
+  /* Text */
+  --text-normal: var(--mt-text);
+  --text-muted: var(--mt-text-muted);
+  --text-faint: var(--mt-text-faint);
+
+  /* Headings - White */
+  --h1-color: var(--mt-text);
+  --h2-color: var(--mt-text);
+  --h3-color: var(--mt-text);
+  --h4-color: var(--mt-text);
+  --h5-color: var(--mt-text);
+  --h6-color: var(--mt-text);
+
+  /* Highlight */
+  --text-highlight-bg: var(--mt-yellow_30);
+  --text-highlight-fg: var(--mt-text);
+
+  /* Links - Blue */
+  --text-accent: var(--mt-blue);
+  --text-accent-hover: var(--mt-cyan);
+
+  /* Tags - Purple */
+  --tag-color: var(--mt-purple);
+  --tag-background: var(--mt-purple_30);
+  --tag-background-hover: var(--mt-purple_30);
+
+  --titlebar-text-color-focused: var(--mt-yellow);
+
+  --inline-title-color: var(--mt-text);
+
+  /* Bold & Italic - White */
+  --bold-color: var(--mt-text);
+  --italic-color: var(--mt-text);
+
+  /* Checkbox - Green */
+  --checkbox-color: var(--mt-green);
+  --checkbox-color-hover: var(--mt-green);
+  --checkbox-border-color: var(--mt-green);
+  --checkbox-border-color-hover: var(--mt-green);
+  --checklist-done-color: var(--mt-text-muted);
+
+  /* Table */
+  --table-header-background: var(--mt-yellow_10);
+  --table-header-background-hover: var(--mt-yellow_30);
+  --table-row-background: var(--mt-bg-dark);
+  --table-row-background-hover: var(--mt-yellow_10);
+
+  --text-selection: var(--mt-purple_30);
+
+  /* Code - White untuk default, syntax highlighting akan override */
+  --code-normal: var(--mt-text);
+  --code-background: var(--mt-bg-elevated);
+
+  /* Icons */
+  --icon-color-hover: var(--mt-yellow);
+  --icon-color-focused: var(--mt-yellow);
+
+  /* Navigation */
+  --nav-item-color-hover: var(--mt-yellow);
+  --nav-item-color-active: var(--mt-yellow);
+  --nav-file-tag: var(--mt-purple);
+
+  /* Graph */
+  --graph-line: var(--mt-border);
+  --graph-node: var(--mt-yellow);
+  --graph-node-tag: var(--mt-purple);
+  --graph-node-attachment: var(--mt-blue);
+
+  /* Tabs */
+  --tab-text-color-focused-active: var(--mt-text);
+  --tab-text-color-focused-active-current: var(--mt-yellow);
+}
+
+/* Search highlight */
+.search-result-file-matched-text {
+  color: var(--mt-yellow) !important;
+  background-color: var(--mt-yellow_30) !important;
+}
+
+/* Hashtag hover */
+.cm-hashtag-begin:hover,
+.cm-hashtag-end:hover {
+  color: var(--mt-purple);
+  text-decoration: underline;
+}
+
+/* Blockquote */
+.markdown-preview-view blockquote,
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+  border-left-color: var(--mt-purple);
+  background-color: var(--mt-bg-elevated);
+}
+
+/* Horizontal rule */
+.markdown-preview-view hr {
+  border-color: var(--mt-border);
+}
+
+/* List bullets */
+.markdown-source-view.mod-cm6 .list-bullet::after {
+  color: var(--mt-cyan);
+}
+
+/* Callout */
+.callout {
+  background-color: var(--mt-bg-elevated);
+}
+
+/* ========================================
+   CODE BLOCK SYNTAX HIGHLIGHTING
+   Edit mode (.cm-*) ikut style Reading mode (.token.*)
+   ======================================== */
+
+/* Comments - Gray #546e7a */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata,
+.cm-comment,
+.cm-s-obsidian .cm-comment,
+.HyperMD-codeblock .cm-comment {
+  color: #546e7a !important;
+  font-style: italic;
+}
+
+/* Punctuation, Brackets - White #ffffff */
+.token.punctuation,
+.cm-punctuation,
+.cm-bracket,
+.cm-s-obsidian .cm-bracket,
+.HyperMD-codeblock .cm-bracket,
+.HyperMD-codeblock .cm-hmd-codeblock {
+  color: #ffffff !important;
+}
+
+/* Tags, Selectors - Red #f07178 */
+.token.selector,
+.token.tag,
+.cm-tag,
+.cm-s-obsidian .cm-tag,
+.HyperMD-codeblock .cm-tag,
+.cm-meta,
+.cm-s-obsidian .cm-meta,
+.HyperMD-codeblock .cm-meta,
+.HyperMD-codeblock .cm-qualifier,
+.HyperMD-codeblock .cm-header,
+.HyperMD-codeblock .cm-quote,
+.HyperMD-codeblock .cm-hr,
+.HyperMD-codeblock .cm-link {
+  color: #f07178 !important;
+}
+
+/* Property - Orange #f78c6c (sama dengan number/boolean) */
+.token.property,
+.cm-property,
+.cm-s-obsidian .cm-property,
+.HyperMD-codeblock .cm-property {
+  color: #f78c6c !important;
+}
+
+/* Number, Boolean, Constant, Symbol, Attr-name - Orange #f78c6c */
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.attr-name,
+.token.deleted,
+.cm-number,
+.cm-atom,
+.cm-attribute,
+.cm-s-obsidian .cm-number,
+.cm-s-obsidian .cm-atom,
+.cm-s-obsidian .cm-attribute,
+.HyperMD-codeblock .cm-number,
+.HyperMD-codeblock .cm-atom,
+.HyperMD-codeblock .cm-attribute {
+  color: #f78c6c !important;
+}
+
+/* String, Char, Attr-value, Builtin - Green #c3e88d */
+.token.string,
+.token.char,
+.token.attr-value,
+.token.builtin,
+.token.inserted,
+.cm-string,
+.cm-builtin,
+.cm-s-obsidian .cm-string,
+.cm-s-obsidian .cm-builtin,
+.HyperMD-codeblock .cm-string,
+.HyperMD-codeblock .cm-builtin {
+  color: #c3e88d !important;
+}
+
+/* Operator, Entity, URL, String-2 - Purple #c792ea */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.cm-operator,
+.cm-string-2,
+.cm-s-obsidian .cm-operator,
+.cm-s-obsidian .cm-string-2,
+.HyperMD-codeblock .cm-operator,
+.HyperMD-codeblock .cm-string-2 {
+  color: #c792ea !important;
+}
+
+/* Keyword, Atrule - Cyan #89ddff */
+.token.atrule,
+.token.keyword,
+.cm-keyword,
+.cm-s-obsidian .cm-keyword,
+.HyperMD-codeblock .cm-keyword {
+  color: #89ddff !important;
+}
+
+/* Function, Def - Yellow #ffcb6b */
+.token.function,
+.token.macro.property,
+.cm-def,
+.cm-s-obsidian .cm-def,
+.HyperMD-codeblock .cm-def {
+  color: #ffcb6b !important;
+}
+
+/* Variable - White #ffffff */
+.token.variable,
+.token.variable-other,
+.token.variable.other,
+span.token.variable,
+.cm-variable,
+.cm-s-obsidian .cm-variable,
+.HyperMD-codeblock .cm-variable {
+  color: #ffffff !important;
+}
+
+/* Class-name, Variable-2 - Yellow #ffcb6b */
+.token.class-name,
+.cm-variable-2,
+.cm-s-obsidian .cm-variable-2,
+.HyperMD-codeblock .cm-variable-2 {
+  color: #ffcb6b !important;
+}
+
+/* Type, Variable-3 - Yellow #ffcb6b */
+.cm-variable-3,
+.cm-s-obsidian .cm-variable-3,
+.HyperMD-codeblock .cm-variable-3 {
+  color: #ffcb6b !important;
+}
+
+/* Regex, Important - Purple #c792ea */
+.token.regex,
+.token.important {
+  color: #c792ea !important;
+}
+
+/* Important, Bold */
+.token.important,
+.token.bold {
+  font-weight: bold !important;
+}
+
+/* Italic */
+.token.italic {
+  font-style: italic !important;
+}
+
+/* Entity cursor */
+.token.entity {
+  cursor: help !important;
+}
+
+/* this keyword - Orange italic #f08a5d */
+.token.keyword.this {
+  color: #f08a5d !important;
+  font-style: italic;
+}
+
+/* Template expression - Coral #e95c63 */
+.token.template-punctuation {
+  color: #e95c63 !important;
+}
+
+/* ========================================
+   FOLDER & FILE ICONS - Lucide style
+   Folder: Yellow #ffcb6b (accent)
+   File: Gray #b0bec5 (subtle)
+   ======================================== */
+
+/* Folder closed icon - Yellow */
+.nav-folder-title-content::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ffcb6b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+}
+
+/* Folder collapsed icon - Yellow */
+.nav-folder.is-collapsed .nav-folder-title-content::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ffcb6b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+}
+
+/* Folder open icon - Yellow */
+.nav-folder:not(.is-collapsed) .nav-folder-title-content::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ffcb6b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+}
+
+/* File icon - Blue-gray (subtle tapi beda dari text) */
+.nav-file-title-content::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2382aaff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M10 9H8'/%3E%3Cpath d='M16 13H8'/%3E%3Cpath d='M16 17H8'/%3E%3C/svg%3E");
+}
+
+/* ========================================
+   CODE BLOCK BORDER
+   ======================================== */
+
+/* Reading mode - code block */
+.markdown-preview-view pre {
+  border: 1px solid var(--mt-border);
+  border-radius: 6px;
+}
+
+/* Edit mode - code block */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  border-left: 2px solid var(--mt-yellow);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin {
+  border-top: 1px solid var(--mt-border);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end {
+  border-bottom: 1px solid var(--mt-border);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* ========================================
+   TABLE ROUNDED CORNERS
+   ======================================== */
+
+/* Table container */
+.markdown-preview-view table,
+.markdown-source-view.mod-cm6 table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--mt-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Remove default cell borders, add only inner borders */
+.markdown-preview-view table th,
+.markdown-preview-view table td,
+.markdown-source-view.mod-cm6 table th,
+.markdown-source-view.mod-cm6 table td {
+  border: none;
+  border-bottom: 1px solid var(--mt-border);
+  border-right: 1px solid var(--mt-border);
+}
+
+/* Remove right border on last column */
+.markdown-preview-view table th:last-child,
+.markdown-preview-view table td:last-child,
+.markdown-source-view.mod-cm6 table th:last-child,
+.markdown-source-view.mod-cm6 table td:last-child {
+  border-right: none;
+}
+
+/* Remove bottom border on last row */
+.markdown-preview-view table tr:last-child td,
+.markdown-source-view.mod-cm6 table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ========================================
+   INLINE CODE BORDER
+   ======================================== */
+
+/* Inline code - Reading mode */
+.markdown-preview-view code:not(pre code) {
+  border: 1px solid var(--mt-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* Inline code - Edit mode */
+.cm-s-obsidian .cm-inline-code,
+.markdown-source-view.mod-cm6 .cm-inline-code {
+  border: 1px solid var(--mt-border);
+  border-radius: 4px;
+  padding: 2px 4px;
+}
