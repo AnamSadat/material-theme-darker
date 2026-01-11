@@ -1,23 +1,23 @@
 # Material Theme Darker
 
-A high contrast dark theme for Obsidian inspired by Material Theme Darker from VS Code.
+A high contrast dark theme for Obsidian inspired by Material Theme Darker from VS Code.<br>
 _Tema gelap high contrast untuk Obsidian terinspirasi dari Material Theme Darker VS Code._
 
 ## Features / Fitur
 
-- **High Contrast** - Deep black background (`#0a0a0a`) for better focus
+- **High Contrast** - Deep black background (`#0a0a0a`) for better focus<br>
   _Background hitam pekat untuk fokus lebih baik_
 
-- **Material Color Palette** - Yellow, purple, cyan, green accents
+- **Material Color Palette** - Yellow, purple, cyan, green accents<br>
   _Palet warna Material - kuning, ungu, cyan, hijau_
 
-- **Syntax Highlighting** - Consistent colors between Edit and Reading mode
+- **Syntax Highlighting** - Consistent colors between Edit and Reading mode<br>
   _Warna syntax konsisten antara mode Edit dan Reading_
 
-- **Custom Icons** - Lucide-style folder and file icons
+- **Custom Icons** - Lucide-style folder and file icons<br>
   _Icon folder dan file custom bergaya Lucide_
 
-- **Rounded UI** - Code blocks, tables, and inline code with rounded borders
+- **Rounded UI** - Code blocks, tables, and inline code with rounded borders<br>
   _UI rounded - code block, tabel, dan inline code dengan border rounded_
 
 ## Color Palette / Palet Warna
@@ -50,32 +50,32 @@ _Tema gelap high contrast untuk Obsidian terinspirasi dari Material Theme Darker
 
 ## Icons / Ikon
 
-- Folder: Yellow Lucide folder icon
+- Folder: Yellow Lucide folder icon<br>
   _Folder: Icon folder Lucide warna kuning_
 
-- File: Blue Lucide file-text icon
+- File: Blue Lucide file-text icon<br>
   _File: Icon file-text Lucide warna biru_
 
 ## Installation / Instalasi
 
-1. Open Obsidian Settings → Appearance → Themes
+1. Open Obsidian Settings → Appearance → Themes<br>
    _Buka Obsidian Settings → Appearance → Themes_
 
-2. Click "Manage" and search for "Material Theme Darker"
+2. Click "Manage" and search for "Material Theme Darker"<br>
    _Klik "Manage" dan cari "Material Theme Darker"_
 
-3. Install and enable
+3. Install and enable<br>
    _Install dan aktifkan_
 
-Or manually / Atau manual:
+**Or manually / Atau manual:**
 
-1. Download `theme.css`
+1. Download `theme.css`<br>
    _Download file `theme.css`_
 
-2. Place in `.obsidian/themes/Material Theme Darker/`
+2. Place in `.obsidian/themes/Material Theme Darker/`<br>
    _Taruh di folder `.obsidian/themes/Material Theme Darker/`_
 
-3. Enable in Appearance settings
+3. Enable in Appearance settings<br>
    _Aktifkan di pengaturan Appearance_
 
 ## Credits
